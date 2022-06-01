@@ -10,9 +10,11 @@ function App() {
 	};
 	return (
 		<AppWrapper id='drum-machine'>
-			<Title>SamPlaya</Title>
-			<Display sample={selectedSmp} />
-			<Samples display={handleTrigger} />
+			<SamplerWrapper>
+				<Title>SamPlaya</Title>
+				<Display sample={selectedSmp} />
+				<Samples display={handleTrigger} />
+			</SamplerWrapper>
 		</AppWrapper>
 	);
 }
@@ -28,7 +30,21 @@ const AppWrapper = styled.div`
 	width: 100vw;
 `;
 
+const SamplerWrapper = styled.div`
+	display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+	width: 180px;
+	height: fit-content;
+	background: slategray;
+	border-radius: 0.5em;
+	padding: 10px;
+`;
+
 const Title = styled.h1`
-	position: absolute;
-	top: 200px;
+	font-size: 1.5em;
+  color: whitesmoke;
+  margin-top: 0px;
+  margin-bottom: 13px;
 `;
