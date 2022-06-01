@@ -6,12 +6,16 @@ export const Display = props => {
 
 export const DisplayWrapper = styled.div`
 	padding: 33px;
-    margin-bottom: 10px;
-	background: lightgray;
-	font-weight: bold;
-	font-size: large;
-	border-radius: 0.2em;
+	margin-bottom: 10px;
+	background: linear-gradient(#dce775, #aed581);
+	font-size: 3.5em;
 	width: 105px;
 	height: 28px;
 	text-align: center;
+    font-family: 'VT323', monospace;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    color: #3c3c3c;
 `;

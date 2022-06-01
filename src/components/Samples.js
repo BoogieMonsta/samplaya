@@ -9,26 +9,26 @@ export const Samples = props => {
 	const samplePath = element => {
 		return '/assets/' + element.toLowerCase() + '.mp3';
 	};
-    
+
 	const handleClick = element => {
-        playSample(element.target.innerText);
+		playSample(element.target.innerText);
 	};
-    
+
 	const playSample = element => {
-        const index = keys.indexOf(element);
+		const index = keys.indexOf(element);
 		const sample = samples[index];
 		sample?.play();
 		props.display(element);
 	};
-    
+
 	const handleKeyDown = key => {
-        const keyPressed = key.key.toUpperCase();
+		const keyPressed = key.key.toUpperCase();
 		if (keys.includes(keyPressed)) {
-            playSample(keyPressed);
+			playSample(keyPressed);
 		}
 	};
-    
-    document.addEventListener('keydown', handleKeyDown);
+
+	document.addEventListener('keydown', handleKeyDown);
 
 	useEffect(() => {
 		let smps = [];
@@ -44,7 +44,7 @@ export const Samples = props => {
 				key={index}
 				onClick={handleClick}
 			>
-				{element}
+				<span>{element}</span>
 				<audio src={samplePath(element)} className='clip' id={element}></audio>
 			</SmpWrapper>
 		);
@@ -54,18 +54,25 @@ export const Samples = props => {
 };
 
 export const SmpBankWrapper = styled.div`
-	width: 180px;
+	/* width: 180px; */
 `;
 
 const SmpWrapper = styled.div`
 	position: relative;
 	float: left;
-	width: 50px;
+	width: 100px;
+	height: 100px;
 	box-sizing: border-box;
 	text-align: center;
-	background: lightgray;
+	background: linear-gradient(whitesmoke, lightgray);
 	margin: 5px;
 	padding: 15px;
 	border-radius: 0.2em;
 	font-weight: bold;
+    font-size: xx-large;
+	color: #c0c0c0;
+	box-shadow: 0em 0.1em 0.1em 0 #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 `;
