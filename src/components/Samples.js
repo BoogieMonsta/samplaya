@@ -54,7 +54,7 @@ export const Samples = props => {
 };
 
 export const SmpBankWrapper = styled.div`
-	/* width: 180px; */
+	margin-top: 5px;
 `;
 
 const SmpWrapper = styled.div`

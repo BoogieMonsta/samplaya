@@ -9,7 +9,7 @@ export const DisplayWrapper = styled.div`
 	margin-bottom: 10px;
 	background: linear-gradient(#dce775, #aed581);
 	font-size: 3.5em;
-	width: 105px;
+	width: 245px;
 	height: 28px;
 	text-align: center;
     font-family: 'VT323', monospace;
